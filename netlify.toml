@@ -1,0 +1,11 @@
+# Netlify configuration for the Astro static site.
+# Docs: https://docs.astro.build/en/guides/deploy/netlify/
+
+[build]
+  command = "pnpm build"
+  publish = "dist"
+
+[build.environment]
+  NODE_VERSION = "22"
+  # Netlify enables Corepack and uses the pnpm version pinned in package.json
+  # ("packageManager") automatically.
