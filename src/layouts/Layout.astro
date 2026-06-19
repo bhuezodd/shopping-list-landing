@@ -21,6 +21,7 @@ const {
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="generator" content={Astro.generator} />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="apple-touch-icon" href="/logo.png" />
 
     <title>{title}</title>
     <meta name="description" content={description} />
@@ -29,6 +30,7 @@ const {
     <meta property="og:type" content="website" />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
+    <meta property="og:image" content={new URL('/logo.png', Astro.site)} />
     <meta name="theme-color" content="#1a1025" />
   </head>
   <body>

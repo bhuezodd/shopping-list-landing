@@ -12,6 +12,7 @@ const previewItems = [
 <section class="hero">
   <div class="container hero-inner">
     <div class="hero-copy">
+      <img class="hero-logo" src="/logo.png" alt="Shopping List by AI logo" width="72" height="72" />
       <span class="section-eyebrow">Smart shopping, simplified</span>
       <h1 class="hero-title">
         Your shopping list,<br />
@@ -67,6 +68,14 @@ const previewItems = [
     grid-template-columns: 1.05fr 0.95fr;
     align-items: center;
     gap: var(--space-4xl);
+  }
+
+  .hero-logo {
+    width: 72px;
+    height: 72px;
+    border-radius: 18px;
+    margin-bottom: var(--space-xl);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
   }
 
   .hero-title {
