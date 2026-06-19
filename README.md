@@ -47,12 +47,14 @@ import Layout from '../layouts/Layout.astro';
 
 ## Commands
 
-| Command           | Action                                      |
-| ----------------- | ------------------------------------------- |
-| `npm install`     | Install dependencies                        |
-| `npm run dev`     | Start the dev server at `localhost:4321`    |
-| `npm run build`   | Build the production site to `./dist/`      |
-| `npm run preview` | Preview the production build locally        |
+This project uses [pnpm](https://pnpm.io/).
+
+| Command         | Action                                   |
+| --------------- | ---------------------------------------- |
+| `pnpm install`  | Install dependencies                     |
+| `pnpm dev`      | Start the dev server at `localhost:4321` |
+| `pnpm build`    | Build the production site to `./dist/`   |
+| `pnpm preview`  | Preview the production build locally     |
 
 ## Configuration notes
 
