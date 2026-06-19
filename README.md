@@ -59,5 +59,5 @@ This project uses [pnpm](https://pnpm.io/).
 ## Configuration notes
 
 - Update `site` in `astro.config.mjs` with your production domain.
-- Replace the placeholder App Store / Google Play URLs in
+- Replace the placeholder Google Play URL in
   `src/components/Download.astro` once the app is published.
