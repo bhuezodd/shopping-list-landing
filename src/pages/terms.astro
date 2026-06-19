@@ -1,0 +1,148 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+// Update this whenever the terms change.
+const lastUpdated = 'June 19, 2026';
+const contactEmail = 'huezo.dev@gmail.com';
+---
+
+<Layout
+  title="Terms & Conditions — Shopping List by AI"
+  description="Terms & Conditions for the Shopping List by AI Android app."
+>
+  <article class="legal container">
+    <header class="legal-header">
+      <h1>Terms &amp; Conditions</h1>
+      <p class="legal-updated">Last updated: {lastUpdated}</p>
+    </header>
+
+    <p>
+      These Terms &amp; Conditions (&ldquo;Terms&rdquo;) govern your use of the
+      <strong>Shopping List by AI</strong> mobile app (the &ldquo;App&rdquo;). By
+      downloading, installing, or using the App, you agree to these Terms. If you
+      do not agree, please do not use the App.
+    </p>
+
+    <h2>Use of the App</h2>
+    <p>
+      Shopping List by AI is a free tool that lets you create and manage shopping
+      lists on your device. You may use the App for your personal, non-commercial
+      purposes. You agree to use it only in ways that are lawful and that do not
+      misuse or interfere with the App.
+    </p>
+
+    <h2>Your content</h2>
+    <p>
+      Any lists, products, and categories you create in the App belong to you and
+      are stored locally on your device. We do not access, collect, or back up
+      this content. You are solely responsible for your content and for keeping
+      your own backups if you wish to retain it.
+    </p>
+
+    <h2>No account required</h2>
+    <p>
+      The App does not require you to create an account or provide personal
+      information. Because your data lives only on your device, we cannot recover
+      it if it is lost, for example after uninstalling the App or clearing its
+      data.
+    </p>
+
+    <h2>Intellectual property</h2>
+    <p>
+      The App, including its name, design, and software, is owned by the developer
+      and is protected by applicable laws. These Terms do not grant you any right
+      to use our trademarks, logo, or branding without prior written permission.
+    </p>
+
+    <h2>Availability and changes</h2>
+    <p>
+      We may update, modify, or discontinue the App or any of its features at any
+      time, with or without notice. We are not liable to you or any third party
+      for any such change or discontinuation.
+    </p>
+
+    <h2>Disclaimer of warranties</h2>
+    <p>
+      The App is provided on an &ldquo;as is&rdquo; and &ldquo;as available&rdquo;
+      basis, without warranties of any kind, whether express or implied. We do not
+      warrant that the App will be uninterrupted, error-free, or free of harmful
+      components, or that it will meet your specific requirements.
+    </p>
+
+    <h2>Limitation of liability</h2>
+    <p>
+      To the maximum extent permitted by law, the developer shall not be liable
+      for any indirect, incidental, special, or consequential damages, or for any
+      loss of data, arising out of or related to your use of the App.
+    </p>
+
+    <h2>Third-party stores</h2>
+    <p>
+      If you download the App from the Google Play Store, your use is also subject
+      to the applicable store&rsquo;s terms and policies, in addition to these
+      Terms.
+    </p>
+
+    <h2>Changes to these Terms</h2>
+    <p>
+      We may revise these Terms from time to time. When we do, we will update the
+      &ldquo;Last updated&rdquo; date at the top of this page. Continued use of the
+      App after changes are posted means you accept the updated Terms.
+    </p>
+
+    <h2>Contact us</h2>
+    <p>
+      If you have any questions about these Terms, you can reach us at
+      <a href={`mailto:${contactEmail}`}>{contactEmail}</a>.
+    </p>
+  </article>
+</Layout>
+
+<style>
+  .legal {
+    max-width: 760px;
+    padding-block: var(--space-5xl);
+    color: var(--text-secondary);
+    font-size: 17px;
+  }
+
+  .legal-header {
+    margin-bottom: var(--space-3xl);
+  }
+
+  .legal h1 {
+    font-size: clamp(32px, 5vw, 44px);
+    color: var(--text-primary);
+  }
+
+  .legal-updated {
+    margin-top: var(--space-sm);
+    color: var(--text-muted);
+    font-size: 15px;
+  }
+
+  .legal h2 {
+    color: var(--text-primary);
+    font-size: 22px;
+    margin-top: var(--space-3xl);
+    margin-bottom: var(--space-md);
+  }
+
+  .legal p {
+    margin-bottom: var(--space-lg);
+  }
+
+  .legal strong {
+    color: var(--text-primary);
+  }
+
+  .legal a {
+    color: var(--primary-light);
+    text-decoration: underline;
+    text-underline-offset: 2px;
+  }
+
+  .legal a:hover {
+    color: var(--accent);
+  }
+</style>
