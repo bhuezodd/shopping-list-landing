@@ -1,0 +1,160 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+// Update this whenever the policy changes.
+const lastUpdated = 'June 19, 2026';
+// TODO: replace with your real support/contact email.
+const contactEmail = 'support@shoppinglistbyai.app';
+---
+
+<Layout
+  title="Privacy Policy — Shopping List by AI"
+  description="Privacy Policy for the Shopping List by AI Android app. We don't collect your data — everything is stored locally on your device."
+>
+  <article class="legal container">
+    <header class="legal-header">
+      <h1>Privacy Policy</h1>
+      <p class="legal-updated">Last updated: {lastUpdated}</p>
+    </header>
+
+    <p>
+      This Privacy Policy explains how the <strong>Shopping List by AI</strong>
+      mobile app (the &ldquo;App&rdquo;) handles your information. We built the App
+      with privacy in mind: <strong>it does not collect, transmit, or share any
+      personal data</strong>. Everything you create in the App stays on your device.
+    </p>
+
+    <h2>The short version</h2>
+    <ul>
+      <li>We do <strong>not</strong> collect personal information.</li>
+      <li>We do <strong>not</strong> require an account or sign-up.</li>
+      <li>Your lists, products, and categories are stored <strong>only on your phone</strong>.</li>
+      <li>We do <strong>not</strong> have servers that receive your data.</li>
+      <li>We do <strong>not</strong> sell or share your data with anyone.</li>
+    </ul>
+
+    <h2>Information we collect</h2>
+    <p>
+      <strong>None.</strong> The App does not ask for your name, email, phone
+      number, or any other personal information. There is no registration and no
+      login.
+    </p>
+
+    <h2>Data you create in the App</h2>
+    <p>
+      Any content you add &mdash; such as shopping lists, products, quantities,
+      and categories &mdash; is saved locally on your device using your phone&rsquo;s
+      on-device storage. This information never leaves your device and is not
+      accessible to us or to any third party. If you uninstall the App or clear
+      its data, this information is permanently deleted.
+    </p>
+
+    <h2>How your data is stored</h2>
+    <p>
+      All App data is kept in a local database on your device. We do not operate
+      any backend service, cloud sync, or remote database for the App, so there
+      is no copy of your data anywhere other than your phone.
+    </p>
+
+    <h2>Third-party services</h2>
+    <p>
+      The App does not integrate analytics, advertising, or tracking SDKs, and it
+      does not send your information to third parties. If the App is distributed
+      through the Google Play Store, Google may collect certain technical
+      information (such as installs or crash data) under
+      <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Google&rsquo;s
+      Privacy Policy</a>. That data is handled by Google, not by us.
+    </p>
+
+    <h2>Permissions</h2>
+    <p>
+      The App only uses the device permissions required for it to function. It
+      does not access your contacts, location, camera, or microphone for the
+      purpose of collecting personal data.
+    </p>
+
+    <h2>Children&rsquo;s privacy</h2>
+    <p>
+      The App does not collect any personal information from anyone, including
+      children. It is safe for users of all ages.
+    </p>
+
+    <h2>Your control over your data</h2>
+    <p>
+      Because all data lives on your device, you are always in full control. You
+      can edit or delete your lists at any time within the App, or remove all
+      data by uninstalling the App or clearing its storage in your device
+      settings.
+    </p>
+
+    <h2>Changes to this policy</h2>
+    <p>
+      We may update this Privacy Policy from time to time. When we do, we will
+      revise the &ldquo;Last updated&rdquo; date at the top of this page. Continued
+      use of the App after changes are posted means you accept the updated policy.
+    </p>
+
+    <h2>Contact us</h2>
+    <p>
+      If you have any questions about this Privacy Policy, you can reach us at
+      <a href={`mailto:${contactEmail}`}>{contactEmail}</a>.
+    </p>
+  </article>
+</Layout>
+
+<style>
+  .legal {
+    max-width: 760px;
+    padding-block: var(--space-5xl);
+    color: var(--text-secondary);
+    font-size: 17px;
+  }
+
+  .legal-header {
+    margin-bottom: var(--space-3xl);
+  }
+
+  .legal h1 {
+    font-size: clamp(32px, 5vw, 44px);
+    color: var(--text-primary);
+  }
+
+  .legal-updated {
+    margin-top: var(--space-sm);
+    color: var(--text-muted);
+    font-size: 15px;
+  }
+
+  .legal h2 {
+    color: var(--text-primary);
+    font-size: 22px;
+    margin-top: var(--space-3xl);
+    margin-bottom: var(--space-md);
+  }
+
+  .legal p {
+    margin-bottom: var(--space-lg);
+  }
+
+  .legal ul {
+    margin-bottom: var(--space-lg);
+    padding-left: var(--space-xl);
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-sm);
+  }
+
+  .legal strong {
+    color: var(--text-primary);
+  }
+
+  .legal a {
+    color: var(--primary-light);
+    text-decoration: underline;
+    text-underline-offset: 2px;
+  }
+
+  .legal a:hover {
+    color: var(--accent);
+  }
+</style>
