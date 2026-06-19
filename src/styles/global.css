@@ -1,0 +1,165 @@
+/*
+ * Global styles + design tokens.
+ * Colors mirror the Shopping List by AI mobile app theme (dark / purple).
+ */
+:root {
+  /* Backgrounds */
+  --background: #1a1025;
+  --surface: #241735;
+  --surface-light: #2e1f42;
+  --surface-pressed: #382850;
+
+  /* Primary (purple) */
+  --primary: #9b6dff;
+  --primary-light: #b794ff;
+  --primary-dark: #7b4fd4;
+
+  /* Accent */
+  --accent: #c084fc;
+  --accent-soft: #a855f7;
+
+  /* Text */
+  --text-primary: #f0e6ff;
+  --text-secondary: #b8a5cc;
+  --text-muted: #7a6b8a;
+  --text-on-primary: #ffffff;
+
+  /* Semantic */
+  --success: #6ee7a0;
+  --danger: #f87171;
+  --warning: #fbbf24;
+
+  /* Borders */
+  --border: #3a2952;
+  --border-light: #4a3665;
+
+  /* Spacing scale */
+  --space-xs: 4px;
+  --space-sm: 8px;
+  --space-md: 12px;
+  --space-lg: 16px;
+  --space-xl: 20px;
+  --space-2xl: 24px;
+  --space-3xl: 32px;
+  --space-4xl: 48px;
+  --space-5xl: 72px;
+
+  /* Radius */
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 14px;
+  --radius-xl: 20px;
+  --radius-full: 9999px;
+
+  /* Layout */
+  --max-width: 1100px;
+
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica,
+    Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji';
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--background);
+  color: var(--text-primary);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+h1,
+h2,
+h3 {
+  line-height: 1.15;
+  margin: 0;
+}
+
+p {
+  margin: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+.container {
+  width: 100%;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding-inline: var(--space-2xl);
+}
+
+/* Buttons */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-sm);
+  font-size: 16px;
+  font-weight: 600;
+  padding: 14px 26px;
+  border-radius: var(--radius-md);
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: transform 0.15s ease, background 0.15s ease, border-color 0.15s ease;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+}
+
+.btn-primary {
+  background: var(--primary);
+  color: var(--text-on-primary);
+}
+
+.btn-primary:hover {
+  background: var(--primary-light);
+}
+
+.btn-secondary {
+  background: transparent;
+  color: var(--text-primary);
+  border-color: var(--border-light);
+}
+
+.btn-secondary:hover {
+  background: var(--surface-light);
+  border-color: var(--primary);
+}
+
+/* Section headings */
+.section-eyebrow {
+  display: inline-block;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: var(--space-md);
+}
+
+.section-title {
+  font-size: clamp(28px, 4vw, 40px);
+  font-weight: 700;
+}
+
+.section-subtitle {
+  color: var(--text-secondary);
+  font-size: 18px;
+  max-width: 600px;
+}

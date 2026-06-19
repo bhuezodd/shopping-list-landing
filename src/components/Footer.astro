@@ -1,0 +1,84 @@
+---
+const year = new Date().getFullYear();
+
+// Legal pages will be added later (Privacy Policy, Terms & Conditions).
+const legalLinks = [
+  { label: 'Privacy Policy', href: '/privacy' },
+  { label: 'Terms & Conditions', href: '/terms' },
+];
+---
+
+<footer class="footer">
+  <div class="container footer-inner">
+    <div class="footer-brand">
+      <a class="brand" href="/">
+        <span aria-hidden="true">🛒</span>
+        <span>Shopping List <span class="brand-ai">by AI</span></span>
+      </a>
+      <p class="footer-tagline">Smart shopping lists for everyday life.</p>
+    </div>
+
+    <nav class="footer-nav" aria-label="Legal">
+      {legalLinks.map((link) => <a href={link.href}>{link.label}</a>)}
+    </nav>
+  </div>
+
+  <div class="container footer-bottom">
+    <p>&copy; {year} Shopping List by AI. All rights reserved.</p>
+  </div>
+</footer>
+
+<style>
+  .footer {
+    border-top: 1px solid var(--border);
+    background: var(--surface);
+    padding-block: var(--space-4xl) var(--space-2xl);
+    margin-top: var(--space-5xl);
+  }
+
+  .footer-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: var(--space-3xl);
+    flex-wrap: wrap;
+  }
+
+  .brand {
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+    font-weight: 700;
+    font-size: 18px;
+  }
+
+  .brand-ai {
+    color: var(--accent);
+  }
+
+  .footer-tagline {
+    color: var(--text-muted);
+    margin-top: var(--space-sm);
+    font-size: 15px;
+  }
+
+  .footer-nav {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-md);
+    color: var(--text-secondary);
+    font-size: 15px;
+  }
+
+  .footer-nav a:hover {
+    color: var(--accent);
+  }
+
+  .footer-bottom {
+    margin-top: var(--space-3xl);
+    padding-top: var(--space-xl);
+    border-top: 1px solid var(--border);
+    color: var(--text-muted);
+    font-size: 14px;
+  }
+</style>

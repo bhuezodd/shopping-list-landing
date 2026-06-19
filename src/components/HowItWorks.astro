@@ -1,0 +1,106 @@
+---
+const steps = [
+  {
+    number: '1',
+    title: 'Create a list',
+    description: 'Start a new list for groceries, errands, or any trip in seconds.',
+  },
+  {
+    number: '2',
+    title: 'Add your products',
+    description:
+      'Pull from your product bank or add new items, then sort them into categories.',
+  },
+  {
+    number: '3',
+    title: 'Shop & check off',
+    description:
+      'Tap items as you grab them and watch your list shrink until you are done.',
+  },
+];
+---
+
+<section class="how" id="how-it-works">
+  <div class="container">
+    <div class="how-head">
+      <span class="section-eyebrow">How it works</span>
+      <h2 class="section-title">Up and running in three steps</h2>
+    </div>
+
+    <ol class="steps">
+      {
+        steps.map((step) => (
+          <li class="step">
+            <span class="step-number">{step.number}</span>
+            <h3 class="step-title">{step.title}</h3>
+            <p class="step-desc">{step.description}</p>
+          </li>
+        ))
+      }
+    </ol>
+  </div>
+</section>
+
+<style>
+  .how {
+    padding-block: var(--space-5xl);
+    background: var(--surface);
+    border-block: 1px solid var(--border);
+  }
+
+  .how-head {
+    text-align: center;
+    margin-bottom: var(--space-4xl);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .steps {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-2xl);
+    counter-reset: step;
+  }
+
+  .step {
+    text-align: center;
+    padding: var(--space-xl);
+  }
+
+  .step-number {
+    display: inline-grid;
+    place-items: center;
+    width: 56px;
+    height: 56px;
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--text-on-primary);
+    background: linear-gradient(135deg, var(--primary), var(--accent-soft));
+    border-radius: var(--radius-full);
+    margin-bottom: var(--space-lg);
+  }
+
+  .step-title {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: var(--space-sm);
+  }
+
+  .step-desc {
+    color: var(--text-secondary);
+    font-size: 15px;
+    max-width: 280px;
+    margin-inline: auto;
+  }
+
+  @media (max-width: 760px) {
+    .steps {
+      grid-template-columns: 1fr;
+      gap: var(--space-lg);
+    }
+  }
+</style>
