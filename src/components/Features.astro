@@ -1,0 +1,128 @@
+---
+const features = [
+  {
+    icon: '📝',
+    title: 'Multiple smart lists',
+    description:
+      'Keep a separate list for groceries, the hardware store, or that weekend trip. Set a default and jump right in.',
+  },
+  {
+    icon: '🗂️',
+    title: 'Reusable product bank',
+    description:
+      'Save the products you buy often once, then add them to any list with a single tap — no more retyping.',
+  },
+  {
+    icon: '🏷️',
+    title: 'Custom categories',
+    description:
+      'Group items by aisle or category so your list matches the way you actually walk through the store.',
+  },
+  {
+    icon: '✅',
+    title: 'Tap to check off',
+    description:
+      'Mark items as purchased as you shop. Completed items stay tidy at a glance so you know what is left.',
+  },
+  {
+    icon: '⚡',
+    title: 'Fast &amp; offline',
+    description:
+      'Everything is stored on your device, so the app is instant and works perfectly without a connection.',
+  },
+  {
+    icon: '🔒',
+    title: 'Private by design',
+    description:
+      'No account, no sign-up, no tracking. Your lists live on your phone and stay yours.',
+  },
+];
+---
+
+<section class="features" id="features">
+  <div class="container">
+    <div class="features-head">
+      <span class="section-eyebrow">Features</span>
+      <h2 class="section-title">Everything you need to shop smarter</h2>
+      <p class="section-subtitle">
+        Thoughtfully designed to make planning and shopping effortless — without
+        the clutter.
+      </p>
+    </div>
+
+    <div class="features-grid">
+      {
+        features.map((feature) => (
+          <article class="feature-card">
+            <span class="feature-icon" aria-hidden="true" set:html={feature.icon} />
+            <h3 class="feature-title" set:html={feature.title} />
+            <p class="feature-desc" set:html={feature.description} />
+          </article>
+        ))
+      }
+    </div>
+  </div>
+</section>
+
+<style>
+  .features {
+    padding-block: var(--space-5xl);
+  }
+
+  .features-head {
+    margin-bottom: var(--space-4xl);
+  }
+
+  .features-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-xl);
+  }
+
+  .feature-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    padding: var(--space-2xl);
+    transition: transform 0.18s ease, border-color 0.18s ease;
+  }
+
+  .feature-card:hover {
+    transform: translateY(-4px);
+    border-color: var(--primary);
+  }
+
+  .feature-icon {
+    display: inline-grid;
+    place-items: center;
+    width: 48px;
+    height: 48px;
+    font-size: 24px;
+    background: var(--surface-light);
+    border-radius: var(--radius-md);
+    margin-bottom: var(--space-lg);
+  }
+
+  .feature-title {
+    font-size: 19px;
+    font-weight: 600;
+    margin-bottom: var(--space-sm);
+  }
+
+  .feature-desc {
+    color: var(--text-secondary);
+    font-size: 15px;
+  }
+
+  @media (max-width: 900px) {
+    .features-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (max-width: 600px) {
+    .features-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
